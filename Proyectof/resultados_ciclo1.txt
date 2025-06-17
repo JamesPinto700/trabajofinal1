@@ -1,0 +1,23 @@
+Universidad Nacional de Loja - Computación 1er Ciclo
+Resultados de Créditos y Valor por M  ateria
+---------------------------------------------------
+Materia: Electricidad
+Créditos: 6,22
+Valor a pagar: $933,33
+---------------------------------------------------
+Materia: Matemáticas Discretas
+Créditos: 4,00
+Valor a pagar: $600,00
+---------------------------------------------------
+Materia: Álgebra Lineal
+Créditos: 6,00
+Valor a pagar: $900,00
+---------------------------------------------------
+Materia: Teoría de la Programación
+Créditos: 9,00
+Valor a pagar: $1350,00
+---------------------------------------------------
+Materia: Comunicación y Redacción Técnica
+Créditos: 4,00
+Valor a pagar: $600,00
+---------------------------------------------------
