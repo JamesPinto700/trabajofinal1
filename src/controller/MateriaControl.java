@@ -4,14 +4,26 @@
  */
 package controller;
 
-
-
 /**
  *
  * @author Carlos Zumba
  */
-public enum MateriaControl {
-  public void guardar(String Ciclo,String Materia, ){
-      
-  }
+public class MateriaControl {
+
+    private Utilidades u = new Utilidades();
+    private String file_name = "data.Electricidad";
+
+    public boolean guardar_Materuas(String name,int Number, String Materias, int hora) {
+        String data = name+"\t"+Number + "\t" + Materias + "\t" + hora + "\n";
+        try {
+            u.save1(data, file_name);
+            return true;
+        } catch (Exception e) {
+            System.out.println(e);
+            return false;
+        }
+    }
+    
 }
+
+
