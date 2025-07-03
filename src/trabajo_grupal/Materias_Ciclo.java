@@ -29,7 +29,7 @@ public class Materias_Ciclo extends javax.swing.JDialog {
 
     private void cargarcarrera() {
         CxbCarrera.removeAllItems();
-        for (String carrera : u.retornInformation("C:\\Users\\jhosu\\Desktop\\Documentos de Carlos Zumba UNL\\TEORIA DE LA PROGRAMACION\\PRACTICAS DE PROGRAMACION\\UNIDAD 2\\JAVA 17\\Trabajo_grupal\\data\\data.carreras")) {
+        for (String carrera : u.retornInformation("data.carreras")) {
             CxbCarrera.addItem(carrera);
         }
     }
@@ -138,7 +138,7 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         System.out.println(CxbCarrera.getSelectedItem());
         cbxciclos.removeAllItems();
         //if (CxbCarrera.getSelectedItem() == "Computacion") {
-         for (String ciclos : u.retornciclos("C:\\Users\\jhosu\\Desktop\\Documentos de Carlos Zumba UNL\\TEORIA DE LA PROGRAMACION\\PRACTICAS DE PROGRAMACION\\UNIDAD 2\\JAVA 17\\Trabajo_grupal\\data\\data.Materias")) {
+         for (String ciclos : u.retornciclos("data.Materias")) {
             cbxciclos.addItem(ciclos);
        // }
             }

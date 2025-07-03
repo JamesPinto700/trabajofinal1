@@ -104,7 +104,7 @@ public class Utilidades {
     public String[] retornInformation(String archivo) {
         int i = 0;
         String[] conservador =new String [6];
-        try (BufferedReader lector = new BufferedReader(new FileReader(archivo))) {
+        try (BufferedReader lector = new BufferedReader(new FileReader(path+File.separatorChar+archivo))) {
             String linea;
             while (((linea = lector.readLine()) != null)) {
                 String[] array = linea.split("\t");
@@ -125,7 +125,7 @@ public class Utilidades {
  public String[] retornciclos(String archivo) {
         int i = 0;
         String[] conservador = new String[9];
-        try (BufferedReader lector = new BufferedReader(new FileReader(archivo))) {
+        try (BufferedReader lector = new BufferedReader(new FileReader(path+File.separatorChar+archivo))) {
             String linea;
             String aux = "";
             while (((linea = lector.readLine()) != null)) {
