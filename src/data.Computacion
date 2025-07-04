@@ -1,0 +1,37 @@
+1	ciclo	Algebra lineal	160	AL
+1	ciclo	Teoria de la Programacion	240	TLP
+1	ciclo	Electricidad	180	Elec
+1	ciclo	Matematicas Discretas 	120	MD
+1	ciclo	Comunicacion y Redaccion Tecnica 	40	CyRT
+2	ciclo	Diseño de Circuito 	120	CD
+2	ciclo	Analisis Matematico 	240	AnM
+2	ciclo	Teoria de la Distribucion y Probalidad 	80	TDP
+2	ciclo	Programacion Orientada a Objetos 	200	POO
+2	ciclo	Emprendimiento e Innovacion Tecnologica 	80	EIT
+3	ciclo	Esructura de Datos 	160	ED
+3	ciclo	Requisitos de Software 	160	RS
+3	ciclo	Estadisticas Analitica  	80	EA
+3	ciclo	Arquirtectura de Ordenadores  	80	AO
+3	ciclo	Base de Datos  	200	BD
+4	ciclo	Complejidad Computacional  	160	CC
+4	ciclo	Ecuaciones Diferenciales  	120	ED
+4	ciclo	Diseño de Sotfware  	200	DS
+4	ciclo	Sistema Operativos  	160	SO
+4	ciclo	Metodologia de la Investigacion en Computacion  	80	MIC
+5	ciclo	Sistemas Digitales  	120	SD
+5	ciclo	Analisis Numerico 	160	AN
+5	ciclo	Desarrollo Basado en Plataformas 	200	DBP
+5	ciclo	Simulacion 	120	Sim
+5	ciclo	Fumdamentos de Redes de Comunicaciones	120	FRC
+6	ciclo	Teoria de Automatas y Computabilidad Avanzada	160	TACA
+6	ciclo	Sistemas Distribuidos	120	SD
+6	ciclo	Procesos de Sotfware	120	PS
+6	ciclo	Computacion en la Nube	120	CN
+6	ciclo	Gestion de Redes y Comunicacion	120	GRC
+7	ciclo	ALgoritmo, Analisis y Programacion Paralelo 	80	AAPP
+7	ciclo	Seguridad de la Informacion 	120	SI
+7	ciclo	Proyectos Tecnologicos l 	120	PT1
+8	ciclo	Etica Profesional 	80	EP
+8	ciclo	Proyecto Tecnologico 2 	200	PT2
+9	ciclo	Composicion de Textos Cientificos en Ingenieria 	160	CTCI
+9	ciclo	Trabajo de Integracion Curricular 	360	TIC

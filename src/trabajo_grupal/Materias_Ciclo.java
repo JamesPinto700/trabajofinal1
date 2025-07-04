@@ -4,9 +4,12 @@
  */
 package trabajo_grupal;
 
+import controller.Cargar_Archivar;
+import controller.Modelo_de_Tabla;
 import controller.Utilidades;
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -16,22 +19,35 @@ public class Materias_Ciclo extends javax.swing.JDialog {
 
     public static String[] Carreras = null;
     Utilidades u = new Utilidades();
+    Cargar_Archivar ch = new Cargar_Archivar();
+    Modelo_de_Tabla m = new Modelo_de_Tabla();
+    public static String[][] materias;
 
     /**
      * Creates new form Materias_Ciclo
+     *
+     * @throws java.io.IOException
      */
-    public Materias_Ciclo(java.awt.Frame parent, boolean modal) {
-
+    public Materias_Ciclo(java.awt.Frame parent, boolean modal) throws IOException {
         super(parent, modal);
         initComponents();
-        cargarcarrera();
+        cargarCarrera();
+        cargarTabla();
     }
 
-    private void cargarcarrera() {
+    private void cargarCarrera() {
         CxbCarrera.removeAllItems();
-        for (String carrera : u.retornInformation("data.carreras")) {
+        for (String carrera : ch.retornInformation("data.carreras")) {
             CxbCarrera.addItem(carrera);
         }
+    }
+
+    public void cargarTabla() throws IOException {
+        materias = u.listAll("data.Computacion");
+        m.setData(materias);
+        tbtMaterias.setModel(m);
+        tbtMaterias.updateUI();
+
     }
 
     /**
@@ -44,16 +60,15 @@ public class Materias_Ciclo extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jScrollBar1 = new javax.swing.JScrollBar();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         CxbCarrera = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tbtMaterias = new javax.swing.JTable();
         cbxciclos = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
 
@@ -87,19 +102,10 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(240, 100, 90, 30);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(540, 100, 100, 30);
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setText("Materias:");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(450, 100, 80, 30);
-
         jPanel4.setBackground(new java.awt.Color(51, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Materias"));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tbtMaterias.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -107,23 +113,28 @@ public class Materias_Ciclo extends javax.swing.JDialog {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Numero", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tbtMaterias);
 
         jPanel4.add(jScrollPane2);
 
         jPanel1.add(jPanel4);
-        jPanel4.setBounds(50, 220, 660, 290);
+        jPanel4.setBounds(130, 160, 470, 470);
 
         cbxciclos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxciclos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxciclosActionPerformed(evt);
+            }
+        });
         jPanel1.add(cbxciclos);
         cbxciclos.setBounds(300, 100, 100, 30);
 
         jLabel5.setText("Mientras no se seleccione una carrera no se mostraran materias");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(10, 200, 360, 16);
+        jLabel5.setBounds(10, 140, 360, 16);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 740, 630);
@@ -134,16 +145,40 @@ public class Materias_Ciclo extends javax.swing.JDialog {
 
 
     private void CxbCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CxbCarreraActionPerformed
+        String Sleccio = (String) CxbCarrera.getSelectedItem();
         CxbCarrera.getSelectedItem();
         System.out.println(CxbCarrera.getSelectedItem());
         cbxciclos.removeAllItems();
-        //if (CxbCarrera.getSelectedItem() == "Computacion") {
-         for (String ciclos : u.retornciclos("data.Materias")) {
-            cbxciclos.addItem(ciclos);
-       // }
+        if ("Computacion".equals(Sleccio)) {
+            cbxciclos.removeAllItems();
+            for (String ciclos : ch.retornciclos("data.Computacion")) {
+                cbxciclos.addItem(ciclos);
+                // }
             }
+            cbxciclos.updateUI();
+        }
+        //if (CxbCarrera.getSelectedItem() == "Computacion") {
+        if ("Electricidad".equals(Sleccio)) {
+            for (String ciclos : ch.retornciclos("data.Electricidad")) {
+                cbxciclos.addItem(ciclos);
+            }
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_CxbCarreraActionPerformed
+
+    private void cbxciclosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxciclosActionPerformed
+        tbtMaterias.removeAll();
+//        String[][] temporal = new String[7][];
+//        int contador = 0;
+//        for (String[] fila : this.materias) {
+//            if (fila[0] == cbxciclos.getSelectedItem()) {
+//                temporal[contador++] = fila;
+//            }
+//        }
+        //m.setData(temporal);
+        tbtMaterias.updateUI();
+// TODO add your handling code here:
+    }//GEN-LAST:event_cbxciclosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,14 +210,18 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Materias_Ciclo dialog = new Materias_Ciclo(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
+                try {
+                    Materias_Ciclo dialog = new Materias_Ciclo(new javax.swing.JFrame(), true);
+                    dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                        @Override
+                        public void windowClosing(java.awt.event.WindowEvent e) {
+                            System.exit(0);
+                        }
+                    });
+                    dialog.setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(Materias_Ciclo.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -190,16 +229,15 @@ public class Materias_Ciclo extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> CxbCarrera;
     private javax.swing.JComboBox<String> cbxciclos;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JTable tbtMaterias;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,51 +1,44 @@
-ciclo	1	Calculo de una Variable  	160
-ciclo	1	Fisica 	160
-ciclo	1	Algebra Lineal 	160
-ciclo	1	Expresion Oral y Escrita 	80
-ciclo	1	Dibujo Tecnico 	80
-ciclo	1	Programacion l 	80
-
-ciclo	2	Calculo de Varias Variables 	160
-ciclo	2	Estatica 	160
-ciclo	2	Deontologia y Ejes de Igualdad 	80
-ciclo	2       Metodologia de la Investigacion  160
-ciclo	2       Programacion  ll  160
-
-ciclo	3       Teoria Electromagnetica  120
-ciclo	3       Ecuasiones Diferenciales  160
-ciclo	3       Dinamica  120
-ciclo	3       Analisis Socioeconomicos y Politico del Mundo Contemporaneo  80
-ciclo	3       Circuitos Electricos  160
-
-ciclo	4	Metodos Numericos y Optimizacion   80
-ciclo	4	Energias Alternativas 	80
-ciclo	4	Electronica Analogica 	120
-ciclo	4	Circuitos Electricos ll 	160
-ciclo	4	Analisis de Señales y Sistemas 	80
-
-ciclo	5	Probalidad y Estadistica 	120
-ciclo	5	Maquinas Electricas l 	120
-ciclo	5	Electronica Digital 	120
-ciclo	5	Control Automatico 	160
-ciclo	5	Procesos Transistorios 	120
-
-ciclo	6	Maquinas Electricas ll 	120
-ciclo	6	Alto Voltaje 	120
-ciclo	6	Electronica de Potencia 	160
-ciclo	6	Operacion y Control de Maquinas Elecricas 	120
-ciclo	6	Automatizacion Industrial y Sistemas Scada 	120
-
-ciclo	7	Centrales de Generacion Electrica 	120
-ciclo	7	Investigacion de Operaciones 	120
-ciclo	7	Redes Inteligentes y Generacion Distributivas 	120
-ciclo	7	Sistemas Electronicos de Potencia l 	120
-ciclo	7	Instalaciones Electricas Residenciales y Comerciales 	120
-
-ciclo	8	Lineas de Transmision y Sub Estaciones 	120
-ciclo	8	Protecciones Electricas 	160
-ciclo	8	Instalaciones Electricas Industriales y Calidad de la Energia 	120
-ciclo	8	Sistemas Electricos de Potencia ll 	120
-ciclo	8	Operacion y Estabilidad de Sistemas Electricos de Potencia 	120
-ciclo	8	Proyecto de Titulacion  	80
-
-ciclo	9	Diseño de Redes de Distribucion  	120
+1	ciclo	Calculo de una Variable 	160	CV
+1	ciclo	Fisica 	160	Fis
+1	ciclo	Algebra Lineal 	160	AL
+1	ciclo	Expresion Oral y Escritura 	80	EOE
+1	ciclo	Dibujo Tecnico 	80	DT
+1	ciclo	Programacion 1 	80	Pro1
+2	ciclo	Calculo de Varias Variables 	160	CVV
+2	ciclo	Estatica 	160	Est
+2	ciclo	Deontologia y Ejes de Igualdad 	80	DEI
+2	ciclo	Metodologia de la Investigacion 	160	MI
+3	ciclo	Circuitos Electricos	160	CE l
+3	ciclo	Teoria Electromagnetica	120	TE
+3	ciclo	Ecuaciones Diferenciales	160	ED
+3	ciclo	Dinamica	120	Din
+3	ciclo	Analisis Socioeconomico y Politico del Mundo Contenporaneo	80	ASPMC
+4	ciclo	Metodos Numericos y Optimizacion	120	MNO
+4	ciclo	Energias Alternativas	80	EA
+4	ciclo	Electricidad Analogica	120	ElecA
+4	ciclo	Circuitos Electricos ll	160	CE ll
+4	ciclo	Analisis de Señales de Sistemas	80	ASS
+5	ciclo	Probalidad y Estatica 	120	PE
+5	ciclo	Maquinas Electricas l 	120	ME l
+5	ciclo	Electronica Digital 	120	ED
+5	ciclo	Control Automatico 	160	CA
+5	ciclo	Procesos Transitorios 	120	PT
+6	ciclo	Maquinas Electricas ll 	120	ME ll
+6	ciclo	Alto Voltaje 	120	AV
+6	ciclo	Electronica de Potencia 	160	EP
+6	ciclo	Operacion y Control de Maquinas Electricas 	120	OCME
+6	ciclo	Automatizacion Industrial y Sistemas Electricas SCADA 	120	AISS.SCADA
+7	ciclo	Centrales de Generacion Electrica 	120	CGE
+7	ciclo	Investigacion de Operaciones 	120	OP
+7	ciclo	Redes Inteligentes y Generacion Distribuida 	120	RIGD
+7	ciclo	Sistemas Electricos de Potencia l 	120	SEP l
+7	ciclo	Instalaciones Electricas Residensiales y Comerciales 	120	IERC
+8	ciclo	Lineas de Transmision y Sub Estaciones 	120	LTSE
+8	ciclo	Protecciones Electricas 	160	PE
+8	ciclo	Instalaciones Electricas Industriales y Calidad de la Energia 	120	IEICE
+8	ciclo	Sistemas Electricos de Potencia ll 	120	SEP ll
+8	ciclo	Operacion y Estabilidad de Sistemas Electricos de Potencia 	120	OESEP
+8	ciclo	Proyecto de Titulacion 	80	PT
+9	ciclo	Diseño de Redes de Distribucion 	120	DRD
+9	ciclo	Emprendimiento e Innovacion 	160	EI
+9	ciclo	Unidad de Integracion Curricular 	360	UIC

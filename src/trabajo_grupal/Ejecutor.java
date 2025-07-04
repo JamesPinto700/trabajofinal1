@@ -14,7 +14,7 @@ public class Ejecutor {
 
     public static void main(String[] args) {
         MateriaControl DC = new MateriaControl();        
-        if (DC.guardar_Materuas("ciclo", 9, "Unidad de Integracion Curricular  ", 360)) {
+        if (DC.guardar_Materuas( 9,"ciclo","Unidad de Integracion Curricular ", 360,"UIC")) {
             System.out.println("Guardado con exito");
         } else {
             System.out.println("No se pudo guardar la data");
