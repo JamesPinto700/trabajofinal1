@@ -7,9 +7,7 @@ package trabajo_grupal;
 import controller.Cargar_Archivar;
 import controller.Modelo_de_Tabla;
 import controller.Utilidades;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.Arrays;
 
 /**
  *
@@ -21,18 +19,15 @@ public class Materias_Ciclo extends javax.swing.JDialog {
     Utilidades u = new Utilidades();
     Cargar_Archivar ch = new Cargar_Archivar();
     Modelo_de_Tabla m = new Modelo_de_Tabla();
-    public static String[][] materias;
+    String[][] materias = null;
+    String carrera = "";
 
-    /**
-     * Creates new form Materias_Ciclo
-     *
-     * @throws java.io.IOException
-     */
-    public Materias_Ciclo(java.awt.Frame parent, boolean modal) throws IOException {
+    public Materias_Ciclo(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         cargarCarrera();
-        cargarTabla();
+        cargarTabla("data.Computacion");
+        cbxciclos.enable(false);
     }
 
     private void cargarCarrera() {
@@ -42,12 +37,26 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         }
     }
 
-    public void cargarTabla() throws IOException {
-        materias = u.listAll("data.Computacion");
-        m.setData(materias);
+    public void cargarTabla(String archivo) {
+        try {
+            materias = u.listAll(archivo);
+            System.out.println(materias.length);
+            m.setData(materias);
+            tbtMaterias.setModel(m);
+            tbtMaterias.updateUI();
+
+        } catch (Exception e) {
+            System.out.println("asdas");
+        }
+
+    }
+
+    public void caragrmateira() {
+        tbtMaterias.removeAll();
+        String Sleccio = (String) cbxciclos.getSelectedItem();
+        m.setData(ch.FiltrarMaterias(materias, Sleccio));
         tbtMaterias.setModel(m);
         tbtMaterias.updateUI();
-
     }
 
     /**
@@ -121,7 +130,7 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         jPanel4.add(jScrollPane2);
 
         jPanel1.add(jPanel4);
-        jPanel4.setBounds(130, 160, 470, 470);
+        jPanel4.setBounds(40, 160, 650, 470);
 
         cbxciclos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbxciclos.addActionListener(new java.awt.event.ActionListener() {
@@ -142,41 +151,65 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         setSize(new java.awt.Dimension(748, 659));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    public void rellenarComboCiclos(String archivo) {
+        for (String ciclos : ch.retornciclos(archivo)) {
+            cbxciclos.addItem(ciclos);
+            // }
+        }
+        cbxciclos.updateUI();
+        cbxciclos.enable();
+    }
 
     private void CxbCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CxbCarreraActionPerformed
-        String Sleccio = (String) CxbCarrera.getSelectedItem();
-        CxbCarrera.getSelectedItem();
+        carrera = (String) CxbCarrera.getSelectedItem();
         System.out.println(CxbCarrera.getSelectedItem());
         cbxciclos.removeAllItems();
-        if ("Computacion".equals(Sleccio)) {
-            cbxciclos.removeAllItems();
-            for (String ciclos : ch.retornciclos("data.Computacion")) {
-                cbxciclos.addItem(ciclos);
-                // }
-            }
-            cbxciclos.updateUI();
-        }
-        //if (CxbCarrera.getSelectedItem() == "Computacion") {
-        if ("Electricidad".equals(Sleccio)) {
-            for (String ciclos : ch.retornciclos("data.Electricidad")) {
-                cbxciclos.addItem(ciclos);
+        if (null == carrera) {
+            cbxciclos.enable(false);
+        } else {
+            switch (carrera) {
+                case "Computacion" -> {
+                    rellenarComboCiclos("data.Computacion");
+                    cargarTabla("data.Computacion");
+                }
+                case "Electricidad" -> {
+                    rellenarComboCiclos("data.Electricidad");
+                    cargarTabla("data.Electricidad");
+                }
+                default -> {
+                    cbxciclos.enable(false);
+                }
             }
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_CxbCarreraActionPerformed
-
+    public void rellenarTablaMaterias(String archivo, String Sleccio) {
+        try {
+            materias = u.listAll(archivo);
+            m.setData(ch.FiltrarMaterias(materias, Sleccio));
+            tbtMaterias.setModel(m);
+            tbtMaterias.updateUI();
+        } catch (Exception e) {
+            System.out.println("asdas");
+        }
+    }
     private void cbxciclosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxciclosActionPerformed
-        tbtMaterias.removeAll();
-//        String[][] temporal = new String[7][];
-//        int contador = 0;
-//        for (String[] fila : this.materias) {
-//            if (fila[0] == cbxciclos.getSelectedItem()) {
-//                temporal[contador++] = fila;
-//            }
-//        }
-        //m.setData(temporal);
-        tbtMaterias.updateUI();
+        if (cbxciclos.getSelectedIndex() == -1) {
+            return;
+        }
+        String opcion = (String) cbxciclos.getSelectedItem();
+        try {
+            switch (carrera) {
+                case "Computacion" ->
+                    rellenarTablaMaterias("data.Computacion", opcion);
+                case "Electricidad" ->
+                    rellenarTablaMaterias("data.Electricidad", opcion);
+                default ->
+                    tbtMaterias.removeAll();
+            }
+        } catch (Exception e) {
+            System.out.println("asdas");
+        }
 // TODO add your handling code here:
     }//GEN-LAST:event_cbxciclosActionPerformed
 
@@ -210,18 +243,14 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                try {
-                    Materias_Ciclo dialog = new Materias_Ciclo(new javax.swing.JFrame(), true);
-                    dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                        @Override
-                        public void windowClosing(java.awt.event.WindowEvent e) {
-                            System.exit(0);
-                        }
-                    });
-                    dialog.setVisible(true);
-                } catch (IOException ex) {
-                    Logger.getLogger(Materias_Ciclo.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                Materias_Ciclo dialog = new Materias_Ciclo(new javax.swing.JFrame(), true);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
             }
         });
     }

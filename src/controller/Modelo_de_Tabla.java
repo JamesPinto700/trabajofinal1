@@ -15,7 +15,6 @@ public class Modelo_de_Tabla extends AbstractTableModel {
     private String[][] data;
 
     public String[][] getdata() {
-
         return data;
     }
 

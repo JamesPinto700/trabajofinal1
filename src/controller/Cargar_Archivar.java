@@ -14,13 +14,12 @@ import java.io.FileReader;
  */
 public class Cargar_Archivar {
 
-    private String path="data";
-    
+    private String path = "data";
+
 
     public String[] retornInformation(String archivo) {
         int i = 0;
         String[] conservador = new String[6];
-        System.out.println(path+File.separatorChar+archivo);
         try (BufferedReader lector = new BufferedReader(new FileReader(path + File.separatorChar + archivo))) {
             String linea;
             while (((linea = lector.readLine()) != null)) {
@@ -42,7 +41,7 @@ public class Cargar_Archivar {
     public String[] retornciclos(String archivo) {
         int i = 0;
         String[] conservador = new String[9];
-        try (BufferedReader lector = new BufferedReader(new FileReader(path+File.separatorChar +archivo))) {
+        try (BufferedReader lector = new BufferedReader(new FileReader(path + File.separatorChar + archivo))) {
             String linea;
             String aux = "";
             while (((linea = lector.readLine()) != null)) {
@@ -62,4 +61,24 @@ public class Cargar_Archivar {
         }
         return conservador;
     }
+
+    public String[][] FiltrarMaterias(String[][] materia, String Numerociclo) {
+        int filas = 0;
+        for (String[] materia1 : materia) {
+            if ((materia1 != null) && (materia1.length > 0) && (materia1[0].equals(Numerociclo))) {
+                filas++;
+            }
+        }
+        String[][] aux = new String[filas][];
+        int count = 0;
+        for (String[] materia1 : materia) {
+            if ((materia1 != null) && (materia1.length > 0)) {
+                if (materia1[0].equals(Numerociclo)) {
+                    aux[count++] = materia1;
+                }
+            }
+        }
+        return aux;
+    }
+    
 }

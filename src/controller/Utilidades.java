@@ -19,7 +19,7 @@ public class Utilidades {
 
     private String path = "data";
 
-    public void save(String text, String name_file) throws IOException {
+  public void save(String text, String name_file) throws IOException {
         FileWriter file = new FileWriter(path + File.separatorChar + name_file, true);
         file.write(text);
         file.close();
@@ -37,7 +37,6 @@ public class Utilidades {
         Integer filas = countRegister(name_file);
         if (filas > 0) {
             Integer col = countColumn(name_file);
-            System.out.println("Columnas " + col);
             data = new String[filas][col];
             FileReader file = new FileReader(path + File.separatorChar + name_file);
             BufferedReader br = new BufferedReader(file);
@@ -45,8 +44,10 @@ public class Utilidades {
             int fil = 0;
             while (linea != null) {
                 String[] columas = linea.split("\t");
+                
                 for (int j = 0; j < columas.length; j++) {
                     data[fil][j] = columas[j];
+                    System.out.println("qqqq");
                 }
                 fil++;
                 linea = br.readLine();
