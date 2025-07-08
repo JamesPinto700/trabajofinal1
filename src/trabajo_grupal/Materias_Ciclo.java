@@ -70,6 +70,7 @@ public class Materias_Ciclo extends javax.swing.JDialog {
 
         jPanel2 = new javax.swing.JPanel();
         jScrollBar1 = new javax.swing.JScrollBar();
+        jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -80,6 +81,18 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         tbtMaterias = new javax.swing.JTable();
         cbxciclos = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+
+        jButton2.setText("jButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -90,7 +103,7 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Carreras y Ciclo");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(210, 40, 200, 50);
+        jLabel1.setBounds(210, 0, 200, 50);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("Carreras:");
@@ -130,7 +143,7 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         jPanel4.add(jScrollPane2);
 
         jPanel1.add(jPanel4);
-        jPanel4.setBounds(40, 160, 650, 470);
+        jPanel4.setBounds(10, 160, 460, 450);
 
         cbxciclos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbxciclos.addActionListener(new java.awt.event.ActionListener() {
@@ -145,10 +158,50 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(10, 140, 360, 16);
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 740, 630);
+        jLabel4.setText("Agregrar Materia");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(600, 120, 160, 30);
 
-        setSize(new java.awt.Dimension(748, 659));
+        jTextField1.setText("jTextField1");
+        jPanel1.add(jTextField1);
+        jTextField1.setBounds(640, 180, 71, 22);
+
+        jTextField3.setText("jTextField3");
+        jPanel1.add(jTextField3);
+        jTextField3.setBounds(640, 230, 71, 22);
+
+        jTextField4.setText("jTextField4");
+        jPanel1.add(jTextField4);
+        jTextField4.setBounds(640, 280, 71, 22);
+
+        jTextField5.setText("jTextField5");
+        jPanel1.add(jTextField5);
+        jTextField5.setBounds(640, 330, 71, 22);
+
+        jLabel6.setText("Numero");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(570, 180, 100, 30);
+
+        jLabel8.setText("Materia");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(570, 230, 50, 16);
+
+        jLabel9.setText("Horas");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(570, 280, 31, 16);
+
+        jLabel10.setText("Siglas");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(570, 330, 43, 16);
+
+        jButton1.setText("Crear materia");
+        jPanel1.add(jButton1);
+        jButton1.setBounds(620, 423, 120, 40);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 10, 860, 650);
+
+        setSize(new java.awt.Dimension(877, 659));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     public void rellenarComboCiclos(String archivo) {
@@ -175,6 +228,10 @@ public class Materias_Ciclo extends javax.swing.JDialog {
                 case "Electricidad" -> {
                     rellenarComboCiclos("data.Electricidad");
                     cargarTabla("data.Electricidad");
+                }
+                case "Minas" -> {
+                    rellenarComboCiclos("data.Minas");
+                    cargarTabla("data.Minas");
                 }
                 default -> {
                     cbxciclos.enable(false);
@@ -204,6 +261,8 @@ public class Materias_Ciclo extends javax.swing.JDialog {
                     rellenarTablaMaterias("data.Computacion", opcion);
                 case "Electricidad" ->
                     rellenarTablaMaterias("data.Electricidad", opcion);
+                case "Minas" ->
+                    rellenarTablaMaterias("data.Minas", opcion);
                 default ->
                     tbtMaterias.removeAll();
             }
@@ -258,15 +317,26 @@ public class Materias_Ciclo extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> CxbCarrera;
     private javax.swing.JComboBox<String> cbxciclos;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.JTable tbtMaterias;
     // End of variables declaration//GEN-END:variables
 }
