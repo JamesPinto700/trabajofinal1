@@ -1,0 +1,47 @@
+1	ciclo	Calculo de una Variable	160	CV
+1	ciclo	Algebra Lineal	80	AL
+1	ciclo	Fisica Aplicada	120	FA
+1	ciclo	Normalizacion y Diseño Asistido por Computador	160	NDAC
+1	ciclo	Quimica del Automovil	120	QA
+1	ciclo	Expresion Oral y Escrita	80	EOE
+2	ciclo	Calculo de Varias Variables	120	CVV
+2	ciclo	Estatica	120	Est
+2	ciclo	Electricidad Automotriz	160	EA
+2	ciclo	Procesos de Fabricacion del Vehiculo	120	PFV
+2	ciclo	Fundamentos de Ciencias de Materiales	120	FCM
+2	ciclo	Metodologia de la Investigacion	80	MI
+3	ciclo	Ecuaciones Diferenciales	120	ED
+3	ciclo	Elasticidad y Resistencia de Materiales	160	ERM
+3	ciclo	Electronica Analogica y Digital	120	EAD
+3	ciclo	Dinamica	120	Din
+3	ciclo	Seguridad y Salud Ocupacional	80	SSO
+3	ciclo	Entornos de Trabajo en el Sector Automotriz	80	ETSA
+4	ciclo	Sistemas de Traslacion	200	ST
+4	ciclo	Analisis Numerico	80	AN
+4	ciclo	Mecanica de Fluidos	120	MF
+4	ciclo	Termodinamica	120	Termod
+4	ciclo	Diseño Mecanico	120	DM
+4	ciclo	Diseño de Experimentos	80	DE
+5	ciclo	Sistemas de Transmision y Frenado	200	STF
+5	ciclo	Refrigeracion y Climatizacion Vehicular	120	RCV
+5	ciclo	Transporte Sostenible	120	TS
+5	ciclo	Transferencia de Calor	80	TC
+5	ciclo	Teoria de Mecanismos de Transporte	120	TMT
+5	ciclo	Liderazgo y Emprendimiento	80	LE
+6	ciclo	Motores de Encendido Provocado	200	MEP
+6	ciclo	Dinamica del Automovil	120	DA
+6	ciclo	Electronica Automotriz	120	EA
+6	ciclo	Gestion del Mantenimiento	80	GM
+6	ciclo	Tecnologia del Transporte y Sistemas Automotrices	80	TTSA
+7	ciclo	Motores de Encendido por Compresion	200	MEC
+7	ciclo	Vehiculos Electricos e Hibridos	120	VEH
+7	ciclo	Autotronica	120	Auto
+7	ciclo	Reglamentacion y Regulacion Vehicular	80	RRV
+7	ciclo	Teoria de Control	80	TC
+8	ciclo	Sistemas de Inyeccion	160	SI
+8	ciclo	Computadoras Automotrices	120	CA
+8	ciclo	Deontologia	40	Deont
+8	ciclo	Gerencia Administrativa y Financiera	80	GAF
+8	ciclo	Desarrollo e Innovacion en el Transporte	120	DIT
+9	ciclo	Escritura y Publicacion Cientifica	120	EPC
+9	ciclo	Trabajo de Integracion Curricular	360	TIC

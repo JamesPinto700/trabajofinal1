@@ -1,0 +1,46 @@
+1	ciclo	Calculo de una Variable	160	CV
+1	ciclo	Dibujo Tecnico	120	DT
+1	ciclo	Algebra Lineal	120	AL
+1	ciclo	Fisica	120	Fis
+1	ciclo	Deontologia y Ejes de Igualdad	80	DEI
+1	ciclo	Expresion Oral y Escrita	120	EOE
+2	ciclo	Calculo de Varias Variables	120	CVV
+2	ciclo	Diseño Asistido por Computador	120	DAC
+2	ciclo	Lenguaje Programacion	120	LP
+2	ciclo	Estatica	120	Est
+2	ciclo	Taller Mecanico	120	TM
+2	ciclo	Metodologia de la Investigacion	120	MI
+3	ciclo	Ecuaciones Diferenciales	120	ED
+3	ciclo	Teoria Electromagnetica	120	TE
+3	ciclo	Ciencias de los Materiales	120	CM
+3	ciclo	Dinamica	120	Din
+3	ciclo	Tecnologia de los Metales	120	TM
+3	ciclo	Eficiencia Energetica en la Industria	40	EEI
+4	ciclo	Circuitos Electricos I	120	CE
+4	ciclo	Metodos Numericos y Optimizacion	120	MNO
+4	ciclo	Taller Electrico	120	TE
+4	ciclo	Mecanica de Solidos	120	MS
+4	ciclo	Termodinamica	120	Termod
+4	ciclo	Manufactura Computarizada	120	MC
+5	ciclo	Circuitos Electricos II	120	CE
+5	ciclo	Electronica Analogica	120	EA
+5	ciclo	Mecanica de Fluidos	120	MF
+5	ciclo	Teoria de Mecanismos y Maquinas	120	TMM
+5	ciclo	Transferencia de Calor	120	TC
+5	ciclo	Mantenimiento y Seguridad Industrial	120	MSI
+6	ciclo	Maquinas Electricas I	120	ME
+6	ciclo	Electronica Digital	120	ED
+6	ciclo	Control Automatico	120	CA
+6	ciclo	Diseño Mecanico	120	DM
+6	ciclo	Sistemas de Conversion de Energia	40	SCE
+7	ciclo	Maquinas Electricas II	120	ME
+7	ciclo	Electronica de Potencia	120	EP
+7	ciclo	Hidraulica y Neumatica	120	HN
+7	ciclo	Maquinas Hidraulicas	120	MH
+7	ciclo	Protecciones Electricas	120	PE
+8	ciclo	Centrales de Generacion Electrica	120	CGE
+8	ciclo	Accionamiento Electrico	120	AE
+8	ciclo	Suministro Electrico	120	SE
+8	ciclo	Energias Renovables	120	ER
+8	ciclo	Redes de Distribucion Electrica	120	RDE
+9	ciclo	Emprendimiento e Ingenieria Financiera	120	EIF
