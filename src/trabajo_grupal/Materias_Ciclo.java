@@ -233,6 +233,14 @@ public class Materias_Ciclo extends javax.swing.JDialog {
                     rellenarComboCiclos("data.Minas");
                     cargarTabla("data.Minas");
                 }
+                case "Electromecanica" -> {
+                    rellenarComboCiclos("data.Electromecanica");
+                    cargarTabla("data.Electromecanica");
+                }
+                case "Ingenieria Automotriz" -> {
+                    rellenarComboCiclos("data.IngenieriaAutomotriz");
+                    cargarTabla("data.IngenieriaAutomotriz");
+                }
                 default -> {
                     cbxciclos.enable(false);
                 }
@@ -263,6 +271,10 @@ public class Materias_Ciclo extends javax.swing.JDialog {
                     rellenarTablaMaterias("data.Electricidad", opcion);
                 case "Minas" ->
                     rellenarTablaMaterias("data.Minas", opcion);
+                case "Electromecanica" ->
+                    rellenarTablaMaterias("data.Electromecanica", opcion);
+                case "Ingenieria Automotriz" ->
+                    rellenarTablaMaterias("data.IngenieriaAutomotriz", opcion);
                 default ->
                     tbtMaterias.removeAll();
             }
