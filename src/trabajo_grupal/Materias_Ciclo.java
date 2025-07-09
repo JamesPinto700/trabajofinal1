@@ -158,43 +158,53 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(10, 140, 360, 16);
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setText("Agregrar Materia");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(600, 120, 160, 30);
+        jLabel4.setBounds(590, 100, 160, 30);
 
-        jTextField1.setText("jTextField1");
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(640, 180, 71, 22);
+        jTextField1.setBounds(630, 160, 80, 30);
 
-        jTextField3.setText("jTextField3");
+        jTextField3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jPanel1.add(jTextField3);
-        jTextField3.setBounds(640, 230, 71, 22);
+        jTextField3.setBounds(630, 200, 190, 40);
 
-        jTextField4.setText("jTextField4");
+        jTextField4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jPanel1.add(jTextField4);
-        jTextField4.setBounds(640, 280, 71, 22);
+        jTextField4.setBounds(630, 260, 70, 40);
 
-        jTextField5.setText("jTextField5");
+        jTextField5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jPanel1.add(jTextField5);
-        jTextField5.setBounds(640, 330, 71, 22);
+        jTextField5.setBounds(630, 320, 71, 30);
 
-        jLabel6.setText("Numero");
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("Numero de ciclo");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(570, 180, 100, 30);
+        jLabel6.setBounds(500, 160, 120, 30);
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setText("Materia");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(570, 230, 50, 16);
+        jLabel8.setBounds(560, 210, 90, 20);
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setText("Horas");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(570, 280, 31, 16);
+        jLabel9.setBounds(570, 270, 50, 20);
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setText("Siglas");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(570, 330, 43, 16);
+        jLabel10.setBounds(570, 320, 60, 20);
 
         jButton1.setText("Crear materia");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
         jButton1.setBounds(620, 423, 120, 40);
 
@@ -283,6 +293,40 @@ public class Materias_Ciclo extends javax.swing.JDialog {
         }
 // TODO add your handling code here:
     }//GEN-LAST:event_cbxciclosActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String materianueva = (jTextField1.getText()+ "\t"+ "ciclo"+"\t" + jTextField3.getText() + "\t" + jTextField4.getText() + "\t" + jTextField5.getText() + "\n");
+        try {
+            switch (carrera) {
+                case "Computacion":
+                    u.save(materianueva, "data.Computacion");
+                    cargarTabla("data.Computacion");
+                    break;
+                case "Electricidad":
+                    u.save(materianueva, "data.Electricidad");
+                    cargarTabla("data.Electricidad");
+                    break;
+                case "Minas":
+                    u.save(materianueva, "data.Minas");
+                    cargarTabla("data.Minas");
+                    break;
+                case "Electromecanica":
+                    u.save(materianueva, "data.Electromecanica");
+                    cargarTabla("data.Electromecanica");
+                    break;
+                case "Ingenieria Automotriz":
+                    u.save(materianueva, "data.IngenieriaAutomotriz");
+                    cargarTabla("data.Automotriz");
+                    break;
+                default:
+                    tbtMaterias.removeAll();
+                    break;
+            }
+        } catch (Exception e) {
+            System.out.println("asdas");
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
