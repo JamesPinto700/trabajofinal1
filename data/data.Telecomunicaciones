@@ -1,0 +1,41 @@
+1	ciclo	Fisica Basica 	160	FB
+1	ciclo	Calculo de una Variable 	160	CV
+1	ciclo	ALgebra Lineal 	120	AL
+1	ciclo	Fundamentos de la Programacion 	80	FP
+1	ciclo	Matematica Discreta 	120	MD
+1	ciclo	Expresion oral y Escrita 	80	EOyE
+2	ciclo	Fisica Aplicada 	160	FA
+2	ciclo	Calculo Multivariable 	120	CM
+2	ciclo	Ecuasiones Diferenciales 	160	ED
+2	ciclo	Probalidad y Estatica 	120	PE
+2	ciclo	Circuitos Electricos 	120	CE
+2	ciclo	Interculturalidad 	40	Inter
+3	ciclo	Teoria Electromagnetica 	120	TE
+3	ciclo	Señales y Sistemas 	120	SS
+3	ciclo	Procesos Estocasticos 	80	PE
+3	ciclo	Programacion Aplicada  	80	PA
+3	ciclo	Electronica Analogica y Digital  	160	EAyD
+4	ciclo	Lineas de Transmision  	120	LT
+4	ciclo	Procesamiento Digital de Señales  	160	PDS
+4	ciclo	Comunicacion Analogicas  	120	CA
+4	ciclo	Teoria de la Informacion  	120	TI
+4	ciclo	Sistemas Microprocesadores 	120	SM
+4	ciclo	Innovacion y Emprendimiento	80	IE
+5	ciclo	Electronica de Alta Frecuencia	120	EAF
+5	ciclo	Atenas	160	Ate
+5	ciclo	Comunicaciones Digitales	160	CD
+5	ciclo	Ingenieria de Trafico	120	IT
+5	ciclo	Fundamentos de Redes de Datos	160	FRD
+6	ciclo	Radio Propagacion	120	RP
+6	ciclo	Comunicacion Opticas	120	CO
+6	ciclo	Sistemas Operativos	80	SO
+6	ciclo	Redes de Datos	120	RD
+7	ciclo	Comunicaiones Inalambricas	160	CI
+7	ciclo	Redes de Acceso	160	RA
+7	ciclo	Comunicacion Unificaciones	120	CU
+7	ciclo	Ingenieria Economica	80	IE
+8	ciclo	Redes Celulares	120	RC
+8	ciclo	Seguridad de Redes	160	SR
+8	ciclo	Aplicaciones de Telecomunicaciones	80	AT
+8	ciclo	Marco Regulatorio de Telecomunicaciones	80	MRT
+9	ciclo	Unidad de Integracion	360	UIC
