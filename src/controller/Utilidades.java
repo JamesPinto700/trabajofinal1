@@ -19,7 +19,7 @@ public class Utilidades {
 
     private String path = "data";
 
-  public void save(String text, String name_file) throws IOException {
+    public void save(String text, String name_file) throws IOException {
         FileWriter file = new FileWriter(path + File.separatorChar + name_file, true);
         file.write(text);
         file.close();
@@ -29,7 +29,6 @@ public class Utilidades {
         FileWriter file = new FileWriter(path + File.separatorChar + name_file, true);
         file.write(text);
         file.close();
-
     }
 
     public String[][] listAll(String name_file) throws IOException {
@@ -44,7 +43,7 @@ public class Utilidades {
             int fil = 0;
             while (linea != null) {
                 String[] columas = linea.split("\t");
-                
+
                 for (int j = 0; j < columas.length; j++) {
                     data[fil][j] = columas[j];
                     System.out.println("qqqq");
